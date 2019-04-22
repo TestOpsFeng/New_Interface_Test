@@ -1,0 +1,17 @@
+host: http://testapi.oa.com
+#login_url: /api/buckydrop/user/account/login
+# 仓储
+create-orde: /warehousing/transport/create-orde
+chargeback: /warehousing/transport/chargeback
+update-logistics: /warehousing/transport/update-logistics
+batch-update-logistics: /warehousing/transport/batch-update-logistics
+query-goods-cat-list: /warehousing/transport/query-goods-cat-list
+
+# 物流分类
+parcel_delivery_list: /rest/v1/parcel/delivery/list
+query_packages: /api/v1/pkg/query-packages
+parcel_create: /rest/v1/parcel/create
+calculate_item_volume_weight: /rest/v1/parcel/calculate/item-volume-weight
+calculate_delivery_cost: /rest/v1/parcel/calculate/delivery-cost
+parcel_trace: /rest/v1/parcel/trace
+parcel_detail: /rest/v1/parcel/detail
