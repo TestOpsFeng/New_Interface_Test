@@ -3,10 +3,21 @@ import functools
 import sys
 import logging
 from utils.HTMLTestRunner_V import stdout_redirector
-
+import unittest
 # logger = logging.getLogger('root')
 # logging.basicConfig(stream=stdout_redirector)
 # logger.error('Faild to get result', exc_info=True)
+from testcase.base_setup import BaseSetup
+
+def desc(func):
+    @functools.wraps(func)
+    def test(*args,**kwargs):
+        func_desc = args[1].get('desc',"装饰器desc错误")
+        # logger.info("\n __dict__:" + str(BaseSetup.__module__))
+        args[0]._testMethodDoc = func_desc
+        func(*args)
+    return test
+
 
 def url(url):
     def log(func):

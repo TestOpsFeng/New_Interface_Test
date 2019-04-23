@@ -3,7 +3,13 @@ from utils.yaml_utils import get_api
 
 login_url = get_api("login_url")
 print("login_url: " + login_url)
-data = {"usrAccount": "qvzn0123@163.com", "usrPassword": "123321"}
+data = {
+    "appCode": "0000001952683880",
+    "appSecret": "b9486ca7a8e84a8f863b3dfbd9e8c074",
+    "currentTime": 1554199785083,
+    "sign": "14a6f90464468c74363a08b7f050028e"
+}
+
 response = requests.post(login_url, json=data)
 token = response.json()['data']['token']
 print('token:',token)

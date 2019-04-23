@@ -1,7 +1,7 @@
 import yaml
 import os
 
-file_name = 'test_api.yaml'
+file_name = 'mock_api.yaml'
 fileNamePath = os.path.split(os.path.realpath(__file__))[0]
 dir = os.path.join(fileNamePath,'../conf')
 
@@ -23,5 +23,7 @@ def get_api(api,file_path=dir,file_name=file_name):
     return config
 
 if __name__ == '__main__':
+    s = "a" and "b%s" % ("d")
+    print(s)
     driver2 = get_api("login_url")
     print(driver2)

@@ -611,6 +611,7 @@ class _TestResult(TestResult):
         self.complete_output()
 
     def addSuccess(self, test):
+
         if test not in self.subtestlist:
             self.success_count += 1
             TestResult.addSuccess(self, test)
@@ -624,6 +625,7 @@ class _TestResult(TestResult):
                 sys.stderr.write('.')
 
     def addError(self, test, err):
+
         self.error_count += 1
         TestResult.addError(self, test, err)
         _, _exc_str = self.errors[-1]
@@ -637,6 +639,7 @@ class _TestResult(TestResult):
             sys.stderr.write('E')
 
     def addFailure(self, test, err):
+
         self.failure_count += 1
         TestResult.addFailure(self, test, err)
         _, _exc_str = self.failures[-1]
@@ -650,6 +653,7 @@ class _TestResult(TestResult):
             sys.stderr.write('F')
 
     def addSubTest(self, test, subtest, err):
+
         if err is not None:
             if getattr(self, 'failfast', False):
                 self.stop()
@@ -809,7 +813,6 @@ class HTMLTestRunner(Template_mixin):
                 name = "%s.%s" % (cls.__module__, cls.__name__)
             doc = cls.__doc__ and cls.__doc__.split("\n")[0] or ""
             desc = doc and '%s: %s' % (name, doc) or name
-
             row = self.REPORT_CLASS_TMPL % dict(
                 style = ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
                 desc = desc,
@@ -820,7 +823,6 @@ class HTMLTestRunner(Template_mixin):
                 cid = 'c%s' % (cid+1),
             )
             rows.append(row)
-
             for tid, (n,t,o,e) in enumerate(cls_results):
                 self._generate_report_test(rows, cid, tid, n, t, o, e)
 
@@ -849,7 +851,6 @@ class HTMLTestRunner(Template_mixin):
         doc = t.shortDescription() or ""
         desc = doc and ('%s: %s' % (name, doc)) or name
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
-
         # script = self.REPORT_TEST_OUTPUT_TMPL % dict(
         #     id=tid,
         # )

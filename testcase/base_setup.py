@@ -1,5 +1,7 @@
 import unittest
 from time import sleep
+import ddt
+
 
 class BaseSetup(unittest.TestCase):
     @classmethod

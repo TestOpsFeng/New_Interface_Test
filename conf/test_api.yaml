@@ -1,11 +1,12 @@
-host: http://testapi.oa.com
-#login_url: /api/buckydrop/user/account/login
+host: http://192.168.0.205:9201
+#host: 192.168.0.104
+login_url: /public/v1/auth/token
 # 仓储
-create-orde: /warehousing/transport/create-orde
-chargeback: /warehousing/transport/chargeback
-update-logistics: /warehousing/transport/update-logistics
-batch-update-logistics: /warehousing/transport/batch-update-logistics
-query-goods-cat-list: /warehousing/transport/query-goods-cat-list
+create-orde: /warehousing.json/transport/create-orde
+chargeback: /warehousing.json/transport/chargeback
+update-logistics: /warehousing.json/transport/update-logistics
+batch-update-logistics: /warehousing.json/transport/batch-update-logistics
+query-goods-cat-list: /warehousing.json/transport/query-goods-cat-list
 
 # 物流分类
 parcel_delivery_list: /rest/v1/parcel/delivery/list
