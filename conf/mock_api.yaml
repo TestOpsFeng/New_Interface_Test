@@ -1,0 +1,18 @@
+host: http://apidoc.oa.com
+#host: 192.168.0.104
+login_url: /mock/327/public/v1/auth/token
+# 仓储
+create-orde: /mock/327/warehousing.json/transport/create-orde
+chargeback: /mock/327/warehousing.json/transport/chargeback
+update-logistics: /mock/327/warehousing.json/transport/update-logistics
+batch-update-logistics: /mock/327/warehousing.json/transport/batch-update-logistics
+query-goods-cat-list: /mock/327/warehousing.json/transport/query-goods-cat-list
+
+# 物流分类
+parcel_delivery_list: /mock/327/rest/v1/parcel/delivery/list
+query_packages: /mock/327/api/v1/pkg/query-packages
+parcel_create: /mock/327/rest/v1/parcel/create
+calculate_item_volume_weight: /mock/327/rest/v1/parcel/calculate/item-volume-weight
+calculate_delivery_cost: /mock/327/rest/v1/parcel/calculate/delivery-cost
+parcel_trace: /mock/327/rest/v1/parcel/trace
+parcel_detail: /mock/327/rest/v1/parcel/detail

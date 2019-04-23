@@ -1,0 +1,189 @@
+{
+  "title": "仓储 - 测试数据",
+  "create_orde_data": [
+    {
+      "desc": "【仓储 - 转运入库订单生成】执行成功",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": 100,
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】language不合法",
+      "data": {
+        "language": "error_language",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": 100,
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】goods - name不合法",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "",
+            "catCode": "3",
+            "price": 100,
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】goods - catCode不合法",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "",
+            "price": 100,
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】goods - price不合法",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": "@!#$",
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】goods - quantity不合法",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": 100,
+            "quantity": "##@@",
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    },
+    {
+      "desc": "【仓储 - 转运入库订单生成】goods - 不传入remark",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": 100,
+            "quantity": 1,
+            "remark": ""
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": ""
+          }
+        ]
+      }
+    },
+    {
+      "desc": "goods - 传入已存在catCode",
+      "data": {
+        "language": "1",
+        "orderState": "CA",
+        "goods": [
+          {
+            "name": "包包1",
+            "catCode": "3",
+            "price": 100,
+            "quantity": 1,
+            "remark": "男士时尚包"
+          },
+          {
+            "name": "包包B",
+            "catCode": "3",
+            "price": 200,
+            "quantity": 1,
+            "remark": "女士时尚包"
+          }
+        ]
+      }
+    }
+  ]
+}
